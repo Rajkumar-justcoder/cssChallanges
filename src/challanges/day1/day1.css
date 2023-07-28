@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.root {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center
+}
+
+.frame {
+    background-color: #3FAF82;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px
+}

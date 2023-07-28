@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.root {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center
+}
+
+.frame {
+    background-color: #3FAF82;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px
+}
+
+/* .hamburger {
+    width: 58px;
+    height: 8px;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    transition: all 3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    opacity: 1;
+    content: '';
+    background-color: white;
+    position: absolute;
+    border-radius: 20px;
+    width: 58px;
+    height: 8px;
+}
+
+.hamburger::before {
+    transform: translateY(-14px);
+}
+
+.hamburger::after {
+    transform: translateY(14px);
+}
+
+.active {
+    transform: scale(0.3);
+    opacity: 1;
+    transform: translateY(0);
+    transform: rotate(-45deg);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.active::after {
+    opacity: 1;
+    transform: translateY(0);
+    transform: rotate(90deg);
+}
+
+.active::before {
+    opacity: 0;
+} */
+
+
+
+.hamburger {
+    width: 58px;
+    height: 58px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+    opacity: 1;
+    content: '';
+    background-color: white;
+    position: absolute;
+    border-radius: 20px;
+    width: 58px;
+    height: 8px;
+    transition: all 3s ease-in-out;
+
+}
+
+.hamburger .centerline {
+    opacity: 1;
+    content: '';
+    background-color: white;
+    position: absolute;
+    border-radius: 20px;
+    width: 58px;
+    height: 8px;
+    animation: a1-rev 3s ease-in-out;
+}
+
+.hamburger::before {
+    transform: translate3d(0, 14px, 0) rotate(0);
+    animation: a2-rev 3s ease-in-out;
+}
+
+.hamburger::after {
+    transform: translate3d(0, -14px, 0) rotate(0);
+    animation: a3-rev 3s ease-in-out;
+}
+
+
+/* .active::before,
+.active::after {
+
+} */
+.active .centerline {
+    animation: a1 3s ease-in-out;
+}
+
+.active::before {
+    animation: a2 3s ease-in-out;
+}
+
+.active::after {
+    animation: a3 3s ease-in-out;
+}
+
+
+
+
+@keyframes a1-rev {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(0.5);
+    }
+    
+    
+    100% {
+    opacity: 0;
+        transform: scale(0);
+    }
+
+}
+
+@keyframes a2-rev {
+    
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0);
+    }
+    100% {
+        transform: translate3d(0, 14px, 0) rotate(0);
+    }
+
+
+}
+
+@keyframes a3-rev {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0);
+    }
+    100% {
+        transform: translate3d(0, -14px, 0) rotate(0);
+    }
+
+}
+
+@keyframes a1 {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes a2 {
+    100% {
+        transform: translate3d(0, 14px, 0) rotate(0);
+    }
+
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0);
+    }
+}
+
+@keyframes a3 {
+    100% {
+        transform: translate3d(0, -14px, 0) rotate(0);
+    }
+
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0);
+    }
+}
