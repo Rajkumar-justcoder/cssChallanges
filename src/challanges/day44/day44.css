@@ -18,8 +18,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
     width: 400px;
     height: 400px
+
 }
 
 .cube {
