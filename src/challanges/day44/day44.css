@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.root {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center
+}
+
+.frame {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 400px
+}
+
+.cube {
+    position: absolute;
+    border: 1px solid #888;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(360deg) translate3d(0, 0, 0);
+    }
+}
