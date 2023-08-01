@@ -4,20 +4,19 @@
     margin: 0;
 }
 
-.root {
+.flex {
     display: flex;
-    height: 100vh;
     justify-content: center;
-    align-items: center
+    align-items: center;
+}
+
+.root {
+    height: 100vh;
 }
 
 .frame {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     overflow: hidden;
     width: 400px;
     height: 400px
